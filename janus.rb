@@ -4,10 +4,9 @@ SlackRubyBot.configure do |config|
   config.send_gifs = false
 end
 
-class PongBot < SlackRubyBot::Bot
-  command 'ping' do |client, data, match|
-    client.say(text: 'pong', channel: data.channel)
+module SimpleBot
+  class Bot < SlackRubyBot::Bot
   end
 end
 
-PongBot.run
+SimpleBot::Bot.run

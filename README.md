@@ -11,7 +11,7 @@ find ./commands/*.rb ./bot.rb -type f | entr -r bundle exec ruby bot.rb
 
 ### Adding commands
 Add a file to the `commands` folder with the structure
-```
+```ruby
 module SimpleBot
   module Commands
     class Help < SlackRubyBot::Commands::Base
